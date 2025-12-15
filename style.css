@@ -651,10 +651,9 @@ footer {
 
 .contact-title {
     position: absolute;
-    width: 259px;
-    height: 43px;
-    top: 347px;
-    left: 591px;
+    top: 220px;
+    left: 50%;
+    transform: translateX(-50%);
     color: white;
     font-size: 50px;
     letter-spacing: 4px;
@@ -663,12 +662,12 @@ footer {
 
 .contact-form-box {
     position: absolute;
+    top: 440px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 369px;
-    height: 200px;
-    top: 478px;
-    left: 536px;
     background: white;
-    padding: 25px 28px;
+    padding: 25px 28px 30px;
     border-radius: 4px;
 }
 
@@ -703,17 +702,22 @@ footer {
 }
 
 .contact-submit {
-    position: absolute;
-    top: 830px;
-    left: 664px;
+    margin-top: 15px;
     height: 41px;
     width: 114px;
-    border: 2px solid white;
+    border: 2px solid black;
     border-radius: 5px;
     background: transparent;
-    color: white;
+    color: black;
     font-size: 15px;
     cursor: pointer;
+    align-self: center;
+    transition: all 0.3s;
+}
+
+.contact-submit:hover {
+    background: black;
+    color: white;
 }
 
 .contact-left-info {
@@ -733,12 +737,9 @@ footer {
 }
 
 .contact-message-box {
-    position: absolute;
-    top: 725px;
-    left: 536px;
-    width: 369px;
-    height: 90px;
-    background: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    height: 100px;
+    background: #f1f1f1;
     padding: 10px;
     border-radius: 4px;
     font-size: 14px;
@@ -763,8 +764,7 @@ footer {
     
     header, footer, .hero, .stories-section,
     .pricing-section, .about-hero, .contact-section {
-        min-width: 100%;
-        overflow-x: auto;
+        max-width: 100%;
     }
 }
 
@@ -891,6 +891,64 @@ footer {
     .social-links {
         justify-content: center;
     }
+
+    @media (max-width: 900px) {
+
+    .contact-section {
+        height: auto;
+        padding: 120px 20px 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-overlay {
+        position: absolute;
+    }
+
+    .contact-title {
+        position: static;
+        transform: none;
+        margin-bottom: 30px;
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .contact-form-box {
+        position: static;
+        transform: none;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .contact-form {
+        gap: 12px;
+    }
+
+    .contact-message-box {
+        position: static;
+        width: 100%;
+        height: 110px;
+    }
+
+    .contact-submit {
+        position: static;
+        width: 100%;
+        max-width: 200px;
+        margin: 20px auto 0;
+        display: block;
+    }
+
+    .contact-left-info,
+    .contact-right-info {
+        position: static;
+        margin-top: 30px;
+        text-align: center;
+        font-size: 13px;
+    }
+}
+
 }
 @media (max-width: 768px) {
     nav {

@@ -9,7 +9,7 @@
 <body>
     <header>
         <nav>
-            <a href="home.html" class="atag">AURORA</a>
+            <a href="index.html" class="atag">AURORA</a>
             <div class="nav-right">
                 <ul class="nav-links">
                     <li><a href="aboutus.html">About us</a></li>
@@ -33,17 +33,18 @@
             <div class="contact-form-box">
                 <form class="contact-form">
                     <label class="contact-label">Name</label>
-                    <input type="text" class="contact-input" placeholder="Enter your name...">
+                    <input type="text" class="contact-input" placeholder="Enter your name..." required>
 
                     <label class="contact-label">E-mail</label>
-                    <input type="text" class="contact-input" placeholder="Enter your Mail...">
+                    <input type="text" class="contact-input" placeholder="Enter your Mail..." required>
+
+                    <label class="contact-label">Message</label>
+                    <textarea class="contact-message-box" placeholder="Please enter your message..." required></textarea>
+
+                    <button class="contact-submit">SUBMIT</button>
                 </form>
+
             </div>
-
-            <label class="contact-message-label">Message</label>
-            <textarea class="contact-message-box" placeholder="Please enter your message..."></textarea>
-
-            <button class="contact-submit">SUBMIT</button>
 
             <div class="contact-left-info">
                 Aurora Media<br>
